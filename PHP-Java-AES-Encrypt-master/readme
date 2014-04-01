@@ -1,16 +1,5 @@
 Java and PHP classes used to encrypt and decrypt strings with a private key, or any key scheme that you create, and pass data between PHP and Java clients or servers.
 
-Java Dependencies
-- Apache Commons Coded - http://commons.apache.org/codec/
-
-PHP Dependencies
-- None
-
-Steven Holder
-http://stevenholder.com
-
-Copyright (C) 2011 by Steven Holder
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
