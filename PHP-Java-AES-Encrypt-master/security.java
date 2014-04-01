@@ -1,8 +1,6 @@
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.commons.codec.binary.Base64;
-
 public class Security {
 	public static String encrypt(String input, String key){
 	  byte[] crypted = null;
@@ -14,7 +12,7 @@ public class Security {
 	    }catch(Exception e){
 	    	System.out.println(e.toString());
 	    }
-	    return new String(Base64.encodeBase64(crypted));
+	    return new String(new sun.misc.BASE64Encoder().encode(crypted));
 	}
 
 	public static String decrypt(String input, String key){
@@ -23,7 +21,7 @@ public class Security {
 	      SecretKeySpec skey = new SecretKeySpec(key.getBytes(), "AES");
 	      Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
 	      cipher.init(Cipher.DECRYPT_MODE, skey);
-	      output = cipher.doFinal(Base64.decodeBase64(input));
+	      output = cipher.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(input));
 	    }catch(Exception e){
 	      System.out.println(e.toString());
 	    }
