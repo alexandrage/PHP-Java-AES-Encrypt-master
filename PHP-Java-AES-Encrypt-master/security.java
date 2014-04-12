@@ -1,7 +1,7 @@
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-public class Security {
+public class security {
 	public static String encrypt(String input, String key){
 	  byte[] crypted = null;
 	  try{
