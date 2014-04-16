@@ -31,7 +31,7 @@ public class security {
 	public static void main(String[] args) {
 	  String key = "1234567891234567";
 	  String data = "example";
-	  System.out.println(Security.decrypt(Security.encrypt(data, key), key));
-	  System.out.println(Security.encrypt(data, key));	    
+	  System.out.println(security.decrypt(security.encrypt(data, key), key));
+	  System.out.println(security.encrypt(data, key));	    
 	}	
 }
